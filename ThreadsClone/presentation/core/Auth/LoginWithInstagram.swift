@@ -25,7 +25,7 @@ struct LoginWithInstagramView: View {
             VStack(alignment: .leading) {
                 Text("Log in with Instagram")
                     .font(.subheadline)
-                    .foregroundStyle(Color(uiColor: .systemGray3))
+                    .foregroundStyle(Color(uiColor: .systemGray))
                 Text("your_username")
             }
             

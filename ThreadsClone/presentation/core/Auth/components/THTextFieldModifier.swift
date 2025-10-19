@@ -11,7 +11,7 @@ struct THTextFieldModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.headline)
-            .padding(12)
+            .padding(16)
             .background(Color(uiColor: .systemGray6))
             .clipShape(RoundedRectangle(cornerRadius: 8))
     }

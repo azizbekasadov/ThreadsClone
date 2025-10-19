@@ -13,31 +13,31 @@ struct MainTabView: View {
     private let viewRegistry: [String: () -> AnyView] = [
         "Home": {
             AnyView(
-                VStack{}
+                FeedView()
             )
         },
         "Friends": {
             AnyView(
                 NavigationStack {
-                    VStack{}
+                    ExploreView()
                 }
             )
         },
         "Write": {
             AnyView(
-                VStack{}
+                WriteView()
             )
         },
         "Likes": {
             AnyView(
                 NavigationStack {
-                    VStack{}
+                    LikeView()
                 }
             )
         },
         "Profile": {
             AnyView(
-                VStack{}
+                ProfileView()
             )
         },
     ]

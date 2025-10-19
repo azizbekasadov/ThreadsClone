@@ -13,7 +13,7 @@ struct THButtonModifier: ViewModifier {
             .font(.subheadline)
             .fontWeight(.semibold)
             .foregroundStyle(.white)
-            .frame(height: 44)
+            .frame(height: 50)
             .frame(maxWidth: .infinity)
             .background(Color.black)
             .clipShape(RoundedRectangle(cornerRadius: 8))

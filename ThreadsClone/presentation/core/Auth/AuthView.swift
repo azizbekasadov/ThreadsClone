@@ -32,7 +32,7 @@ struct AuthView: View {
     
     @ViewBuilder
     private func TextFieldsView() -> some View {
-        VStack {
+        VStack(spacing: 12) {
             TextField("Enter your email", text: $email)
                 .autocorrectionDisabled()
                 .textInputAutocapitalization(.never)
