@@ -9,7 +9,25 @@ import SwiftUI
 
 struct FeedView: View {
     var body: some View {
-        Text("Hello, World!")
+        NavigationStack {
+            Image("Common/applogo")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 42)
+                .padding(.bottom, 10)
+            
+            ScrollView(showsIndicators: false) {
+                LazyVStack {
+                    ForEach(0..<10) { item in
+                        ThreadCellView(data: .danySample)
+                    }
+                }
+                .padding([.horizontal, .bottom])
+            }
+            .refreshable {
+                
+            }
+        }
     }
 }
 

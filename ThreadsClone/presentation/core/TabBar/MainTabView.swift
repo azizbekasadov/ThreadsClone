@@ -31,7 +31,7 @@ struct MainTabView: View {
         "Likes": {
             AnyView(
                 NavigationStack {
-                    LikeView()
+                    ActivityView()
                 }
             )
         },
@@ -93,6 +93,11 @@ struct MainTabView: View {
                     .tag(index)
             }
         }
+        .background(.white)
+        .tint(.white)
+        .scrollEdgeEffectStyle(.hard, for: .bottom)
+        .defaultAdaptableTabBarPlacement(.tabBar)
+        .tabBarMinimizeBehavior(.onScrollUp)
     }
 }
 
