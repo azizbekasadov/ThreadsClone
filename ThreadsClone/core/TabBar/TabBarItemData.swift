@@ -1,0 +1,43 @@
+
+import SwiftUI
+
+struct TabBarItemData: Identifiable {
+    let id: String
+    let title: String
+    let image: String
+    let shouldBeRenderedOriginal: Bool
+    
+    init(
+        id: String = UUID().uuidString,
+        title: String,
+        image: String,
+        shouldBeRenderedOriginal: Bool = false
+    ) {
+        self.id = id
+        self.title = title
+        self.image = image
+        self.shouldBeRenderedOriginal = shouldBeRenderedOriginal
+    }
+}
+
+struct MainTabBarItem: ViewModifier {
+    let data: TabBarItemData
+    
+    func body(content: Content) -> some View {
+        content
+            .tabItem {
+                VStack {
+                    Image(data.image)
+                        .renderingMode(data.shouldBeRenderedOriginal ? .original : .template)
+                    Text(data.title)
+                }
+                .id(data.id)
+            }
+    }
+}
+
+extension View {
+    func mainTabBarItem(_ data: TabBarItemData) -> some View {
+        modifier(MainTabBarItem(data: data))
+    }
+}
