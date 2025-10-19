@@ -99,9 +99,22 @@
 		5D4AE6E02EA1A83000FE8378 /* ThreadsKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreadsKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5D2131CF2EA4610200093E5B /* Exceptions for "ThreadsClone" folder in "ThreadsClone" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				resources/Info.plist,
+			);
+			target = 5D4AE66B2EA1A0E500FE8378 /* ThreadsClone */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5D4AE66E2EA1A0E500FE8378 /* ThreadsClone */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5D2131CF2EA4610200093E5B /* Exceptions for "ThreadsClone" folder in "ThreadsClone" target */,
+			);
 			path = ThreadsClone;
 			sourceTree = "<group>";
 		};
@@ -455,6 +468,8 @@
 			);
 			mainGroup = 5D4AE6632EA1A0E500FE8378;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5D4AE66D2EA1A0E500FE8378 /* Products */;
 			projectDirPath = "";
@@ -750,6 +765,7 @@
 				DEVELOPMENT_TEAM = 7FCTC6DRE7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThreadsClone/resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -782,6 +798,7 @@
 				DEVELOPMENT_TEAM = 7FCTC6DRE7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThreadsClone/resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
