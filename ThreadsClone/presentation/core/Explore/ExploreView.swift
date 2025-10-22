@@ -8,11 +8,36 @@
 import SwiftUI
 
 struct ExploreView: View {
+    @State private var searchText: String = ""
+    
     var body: some View {
-        Text("Hello, World!")
+        ScrollView {
+            LazyVStack {
+                ForEach(0..<10, id: \.self) { user in
+                    Grid {
+                        GridRow {
+                            UserCellView()
+                        }
+                        .padding(.vertical, 5)
+                        
+                        Divider()
+                    }
+                }
+            }
+            .padding()
+        }
+        .searchable(text: $searchText, prompt: "Search")
+        .navigationTitle("Search")
     }
+
 }
 
 #Preview {
-    ExploreView()
+    NavigationStack {
+        ExploreView()
+    }
+}
+
+#Preview("ExploreView + MainTabView") {
+    MainTabView()
 }

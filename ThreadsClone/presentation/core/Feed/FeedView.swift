@@ -23,6 +23,7 @@ struct FeedView: View {
                     }
                 }
                 .padding([.horizontal, .bottom])
+                .padding(.top)
             }
             .refreshable {
                 
@@ -34,3 +35,9 @@ struct FeedView: View {
 #Preview {
     FeedView()
 }
+
+
+#Preview("FeedView + MainTabView") {
+    MainTabView()
+}
+

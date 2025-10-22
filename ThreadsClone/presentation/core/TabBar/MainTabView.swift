@@ -70,6 +70,20 @@ struct MainTabView: View {
         ),
     ]
     
+    init() {
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.backgroundColor = UIColor.systemBackground
+        tabBarAppearance.configureWithOpaqueBackground()
+        tabBarAppearance.shadowImage = UIImage()
+        tabBarAppearance.shadowColor = .clear
+        tabBarAppearance.stackedItemSpacing = 10
+
+        UITabBar.appearance().isTranslucent = false
+        UITabBar.appearance().backgroundColor = UIColor.systemBackground
+        UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+        UITabBar.appearance().standardAppearance = tabBarAppearance
+    }
+    
     var body: some View {
         Group {
             if #available(iOS 18.0, *) {
@@ -92,11 +106,10 @@ struct MainTabView: View {
                     .onAppear { selection = index }
                     .tag(index)
             }
+            .padding(.bottom, -70)
         }
         .background(.white)
         .tint(.white)
-        .scrollEdgeEffectStyle(.hard, for: .bottom)
-        .defaultAdaptableTabBarPlacement(.tabBar)
         .tabBarMinimizeBehavior(.onScrollUp)
     }
 }
